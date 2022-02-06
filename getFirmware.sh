@@ -26,6 +26,7 @@ if [[ "$OSTYPE" == "linux-gnu"* ]]; then
 	sudo apt-get install python3-tk      --fix-missing -y
 	sudo apt-get install python3-venv    --fix-missing -y
 	sudo apt-get install cmake           --fix-missing -y
+	sudo apt-get install openocd		 --fix-missing -y
 	pip3 install serial
 	pip3 install pyqt6
 	pip3 install pyinstaller
