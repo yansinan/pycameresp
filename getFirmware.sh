@@ -27,6 +27,7 @@ if [[ "$OSTYPE" == "linux-gnu"* ]]; then
 	sudo apt-get install python3-venv    --fix-missing -y
 	sudo apt-get install cmake           --fix-missing -y
 	sudo apt-get install openocd		 --fix-missing -y
+	#openocd add by dr ,miss in WSL debian bulleyes
 	pip3 install serial
 	pip3 install pyqt6
 	pip3 install pyinstaller
@@ -101,6 +102,13 @@ ln -s $ROOT/esp-homekit-sdk/components/homekit/hkdf-sha               hkdf-sha
 ln -s $ROOT/esp-homekit-sdk/components/homekit/json_generator         json_generator
 ln -s $ROOT/esp-homekit-sdk/components/homekit/json_parser            json_parser
 ln -s $ROOT/esp-homekit-sdk/components/homekit/mu_srp                 mu_srp
+
+echo "************"
+echo "Get dr.quirc cmodule"
+echo "************"
+cd $ROOT
+git clone https://github.com/yansinan/quirc.git
+
 
 echo "*************"
 echo "Get pyparsing"

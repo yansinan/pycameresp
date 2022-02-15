@@ -62,6 +62,7 @@ make submodules
 echo "**************"
 echo "Build " $BOARD
 echo "**************"
-make BOARD=$BOARD
+# make clean
+make BOARD=$BOARD USER_C_MODULES=/home/dr/pycameresp/firmware/quirc/micropython/micropython.cmake
 cd $ROOT
 cp $ROOT/micropython/ports/esp32/build-$BOARD/firmware.bin $BOARD-firmware.bin
